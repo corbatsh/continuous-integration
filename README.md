@@ -1,1 +1,1 @@
-# continuous-integration with cypress and jenkins
+# continuous-integration with cypress@10 and jenkins
