@@ -1,7 +1,7 @@
 Feature: Pick a value on the slider
 
   As a user
-  I pick a value on the slider
+  I can pick a value on the slider
 
   Scenario: Pick a value on the slider
     Given I open basePage

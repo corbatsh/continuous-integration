@@ -17,6 +17,7 @@
 import './submit'
 import './app'
 import './selectBox'
+import './slider'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

@@ -1,9 +1,9 @@
 declare namespace Cypress {
 	interface Chainable {
-		pickValueOnSlider(value: string): Chainable<Element>
+		pickValueOnSlider(value: number): Chainable<Element>
 	}
 }
 
-Cypress.Commands.add('pickValueOnSlider', pick => {
-	cy.contains(pick).click()
+Cypress.Commands.add('pickValueOnSlider', value => {
+	cy.contains(value).click()
 })
