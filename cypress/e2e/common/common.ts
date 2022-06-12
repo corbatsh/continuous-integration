@@ -15,3 +15,11 @@ defineStep('I see {string} in the url', url => {
 defineStep('I reload the browser', () => {
 	cy.reload()
 })
+
+defineStep('I open basePage', () => {
+	cy.visitBasePage()
+})
+
+defineStep('I click the checkbox "I have tried TestCafe"', () => {
+	cy.clickTestCafeCheckbox()
+})

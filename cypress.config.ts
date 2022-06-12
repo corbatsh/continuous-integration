@@ -4,14 +4,12 @@ const browserify = require('@cypress/browserify-preprocessor')
 
 export default defineConfig({
 	projectId: 's1nswq',
+	video: false,
+	animationDistanceThreshold: 20,
+	defaultCommandTimeout: 4000,
+	pageLoadTimeout: 10000,
+	watchForFileChanges: false,
 	e2e: {
-		video: false,
-		watchForFileChanges: false,
-		waitForAnimations: true,
-		animationDistanceThreshold: 5,
-		defaultCommandTimeout: 10000,
-		pageLoadTimeout: 10000,
-
 		setupNodeEvents(on, config) {
 			const options = {
 				...browserify.defaultOptions,
@@ -19,5 +17,7 @@ export default defineConfig({
 			}
 			on('file:preprocessor', cucumber(options))
 		},
+		excludeSpecPattern: ['*.ts', '*.md'],
+		specPattern: '**/*.{feature,features}',
 	},
 })
